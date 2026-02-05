@@ -7,7 +7,7 @@
     <meta name="description" content="Solo developer crafting thoughtful digital tools from the Black Forest, Germany. Music practice apps and creative activities for families.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -15,90 +15,111 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Source Serif 4', 'Georgia', 'serif'],
                     },
+                    colors: {
+                        accent: {
+                            DEFAULT: '#c2410c',
+                            light: '#ea580c',
+                        }
+                    }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-white text-slate-800 font-sans">
+<body class="bg-stone-50 text-stone-800 font-sans">
     <!-- Header -->
-    <header class="border-b border-slate-200">
-        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/" class="text-xl font-semibold text-slate-800">Selinger Apps</a>
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-10 border-b border-stone-200">
+        <div class="max-w-3xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="font-serif text-xl tracking-tight text-stone-900">Selinger Apps</a>
             <nav class="flex gap-6 text-sm">
-                <a href="#products" class="text-slate-500 hover:text-sky-500 transition-colors">Products</a>
-                <a href="#about" class="text-slate-500 hover:text-sky-500 transition-colors">About</a>
-                <a href="mailto:oliver@selingerapps.com" class="text-slate-500 hover:text-sky-500 transition-colors">Contact</a>
+                <a href="#work" class="text-stone-500 hover:text-accent transition-colors">Work</a>
+                <a href="#about" class="text-stone-500 hover:text-accent transition-colors">About</a>
+                <a href="mailto:oliver@selingerapps.com" class="text-stone-500 hover:text-accent transition-colors">Say hi</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero -->
-    <section class="py-16 md:py-24">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Selinger Apps</h1>
-            <p class="text-xl md:text-2xl text-slate-500 mb-6">Indie apps for musicians and families</p>
-            <p class="text-slate-600 max-w-2xl mx-auto">Solo developer crafting thoughtful digital tools from the Black Forest, Germany.</p>
+    <section class="py-20 md:py-28">
+        <div class="max-w-3xl mx-auto px-6">
+            <p class="text-accent font-medium mb-3">Indie studio from the Black Forest</p>
+            <h1 class="font-serif text-4xl md:text-5xl tracking-tight text-stone-900 mb-6 leading-tight">Building tools for<br>musicians and families.</h1>
+            <p class="text-lg text-stone-600 max-w-xl leading-relaxed">I'm Oliver, a trumpet player and software developer. I make apps that solve problems I actually have — then share them with others who might find them useful too.</p>
         </div>
     </section>
 
-    <!-- Products -->
-    <section id="products" class="py-16 bg-slate-50">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl font-semibold text-slate-800 text-center mb-12">Products</h2>
-            <div class="grid md:grid-cols-2 gap-6">
+    <!-- Work -->
+    <section id="work" class="py-16">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="font-serif text-2xl text-stone-900 mb-10">Current projects</h2>
+
+            <div class="space-y-6">
                 <!-- TonArt Coach -->
-                <div class="bg-white rounded-xl p-8 border border-slate-200 shadow-sm">
-                    <h3 class="text-xl font-semibold text-slate-800 mb-3">TonArt Coach</h3>
-                    <p class="text-slate-600 mb-4">Practice companion for brass & wind musicians. Scales, arpeggios, tuner, drone, and metronome — all in one app.</p>
-                    <a href="https://tonartcoach.com" target="_blank" rel="noopener" class="inline-flex items-center text-sky-500 hover:text-sky-600 font-medium transition-colors">
-                        Try the App
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </a>
-                </div>
+                <a href="https://tonartcoach.com" target="_blank" rel="noopener" class="block group">
+                    <div class="bg-white rounded-lg p-6 border-l-4 border-accent shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-stone-900 group-hover:text-accent transition-colors">TonArt Coach</h3>
+                            <span class="text-xs text-stone-400 bg-stone-100 px-2 py-1 rounded">Web App</span>
+                        </div>
+                        <p class="text-stone-600 mb-3">A practice companion I built because I got tired of juggling five different apps during warm-ups. Scales, arpeggios, drone, tuner, metronome — one screen, no fuss.</p>
+                        <span class="inline-flex items-center text-sm text-accent font-medium">
+                            tonartcoach.com
+                            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
 
                 <!-- KinderZauberzeit -->
-                <div class="bg-white rounded-xl p-8 border border-slate-200 shadow-sm">
-                    <h3 class="text-xl font-semibold text-slate-800 mb-3">KinderZauberzeit</h3>
-                    <p class="text-slate-600 mb-4">Creative scavenger hunts for children's birthdays. Printable PDFs with audio stories that bring magic to every celebration.</p>
-                    <a href="https://www.etsy.com/shop/KinderZauberzeit" target="_blank" rel="noopener" class="inline-flex items-center text-sky-500 hover:text-sky-600 font-medium transition-colors">
-                        Visit Shop
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </a>
-                </div>
+                <a href="https://www.etsy.com/shop/KinderZauberzeit" target="_blank" rel="noopener" class="block group">
+                    <div class="bg-white rounded-lg p-6 border-l-4 border-amber-400 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-stone-900 group-hover:text-amber-600 transition-colors">KinderZauberzeit</h3>
+                            <span class="text-xs text-stone-400 bg-stone-100 px-2 py-1 rounded">Etsy Shop</span>
+                        </div>
+                        <p class="text-stone-600 mb-3">Printable scavenger hunts for children's birthdays. Each one comes with audio stories — a narrator who guides the kids through the adventure. Born from planning our own kids' parties.</p>
+                        <span class="inline-flex items-center text-sm text-amber-600 font-medium">
+                            Visit on Etsy
+                            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="py-16">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl font-semibold text-slate-800 text-center mb-8">About</h2>
-            <div class="max-w-2xl mx-auto text-center">
-                <p class="text-slate-600 mb-4">Hi, I'm Oliver — a software developer and musician based in Merdingen, Germany. I build apps that I wish existed: tools for practicing music more effectively, and activities that bring families together.</p>
-                <p class="text-slate-600">Selinger Apps is my small indie studio. Every app is crafted with care, respecting your time and privacy.</p>
+    <section id="about" class="py-16 bg-white border-y border-stone-200">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="font-serif text-2xl text-stone-900 mb-6">About</h2>
+            <div class="text-stone-600 space-y-4 leading-relaxed">
+                <p>I've been writing software professionally for over 15 years, mostly enterprise stuff during the day. Selinger Apps is my side project — a place to build things that are <em>actually fun</em> to make.</p>
+                <p>When I'm not coding, I play trumpet in a local brass band and spend time with my family in Merdingen, a small town near Freiburg in southern Germany.</p>
+                <p>Everything here is built with care. No dark patterns, no data harvesting, no subscription traps. Just useful tools that respect your time.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-200 py-12">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="text-slate-500 text-sm">
-                    © 2026 Selinger Apps. All rights reserved.
+    <footer class="py-12">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div>
+                    <p class="font-serif text-stone-900 mb-1">Selinger Apps</p>
+                    <p class="text-sm text-stone-500">Merdingen, Germany</p>
                 </div>
-                <div class="flex gap-6 text-sm">
-                    <a href="mailto:oliver@selingerapps.com" class="text-slate-500 hover:text-sky-500 transition-colors">oliver@selingerapps.com</a>
-                    <a href="/privacy.html" class="text-slate-500 hover:text-sky-500 transition-colors">Privacy Policy</a>
-                    <a href="/impressum.html" class="text-slate-500 hover:text-sky-500 transition-colors">Impressum</a>
+                <div class="flex flex-col md:flex-row gap-4 md:gap-6 text-sm">
+                    <a href="mailto:oliver@selingerapps.com" class="text-stone-600 hover:text-accent transition-colors">oliver@selingerapps.com</a>
+                    <a href="/privacy.html" class="text-stone-500 hover:text-accent transition-colors">Privacy</a>
+                    <a href="/impressum.html" class="text-stone-500 hover:text-accent transition-colors">Impressum</a>
                 </div>
             </div>
+            <p class="text-xs text-stone-400 mt-8">© 2026 Oliver Selinger-Lutz</p>
         </div>
     </footer>
 </body>

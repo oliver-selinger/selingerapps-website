@@ -2,6 +2,10 @@
 
 Company website for Selinger Apps, hosted on GitHub Pages at [selingerapps.com](https://selingerapps.com).
 
+## Status
+
+**Live** — Deployed February 2026 with HTTPS enabled.
+
 ## Structure
 
 ```
@@ -48,7 +52,7 @@ The site automatically deploys when pushing to the `main` branch.
 
 **CNAME Record (www subdomain):**
 ```
-www → <username>.github.io
+www → oliver-selinger.github.io
 ```
 
 ## Contact

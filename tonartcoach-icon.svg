@@ -1,0 +1,56 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Concept 3c: Radiating pulse (concentric circles expanding like sound waves) -->
+  <defs>
+    <linearGradient id="bg3c" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ring1c" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2dd4bf;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:0.6" />
+    </linearGradient>
+    <linearGradient id="ring2c" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" fill="url(#bg3c)" rx="110"/>
+
+  <!-- Outer ring (major keys) -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="url(#ring1c)" stroke-width="28"/>
+
+  <!-- Inner ring (minor keys) -->
+  <circle cx="256" cy="256" r="120" fill="none" stroke="url(#ring2c)" stroke-width="20"/>
+
+  <!-- 12 subtle tick marks on outer ring -->
+  <g stroke="#2dd4bf" stroke-width="3" opacity="0.5">
+    <line x1="256" y1="76" x2="256" y2="96"/>
+    <line x1="346" y1="101" x2="336" y2="116"/>
+    <line x1="411" y1="166" x2="391" y2="176"/>
+    <line x1="436" y1="256" x2="416" y2="256"/>
+    <line x1="411" y1="346" x2="391" y2="336"/>
+    <line x1="346" y1="411" x2="336" y2="396"/>
+    <line x1="256" y1="436" x2="256" y2="416"/>
+    <line x1="166" y1="411" x2="176" y2="396"/>
+    <line x1="101" y1="346" x2="121" y2="336"/>
+    <line x1="76" y1="256" x2="96" y2="256"/>
+    <line x1="101" y1="166" x2="121" y2="176"/>
+    <line x1="166" y1="101" x2="176" y2="116"/>
+  </g>
+
+  <!-- C marker at top -->
+  <circle cx="256" cy="76" r="12" fill="#2dd4bf"/>
+
+  <!-- Center dark circle -->
+  <circle cx="256" cy="256" r="60" fill="#0f172a" opacity="0.8"/>
+
+  <!-- Radiating pulse circles (like sound waves expanding) -->
+  <circle cx="256" cy="256" r="15" fill="none" stroke="#2dd4bf" stroke-width="3" opacity="0.9"/>
+  <circle cx="256" cy="256" r="28" fill="none" stroke="#2dd4bf" stroke-width="2.5" opacity="0.6"/>
+  <circle cx="256" cy="256" r="41" fill="none" stroke="#2dd4bf" stroke-width="2" opacity="0.3"/>
+
+  <!-- Center dot (source of pulse) -->
+  <circle cx="256" cy="256" r="6" fill="#2dd4bf"/>
+</svg>

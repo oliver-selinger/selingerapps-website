@@ -4,14 +4,21 @@ Company website for Selinger Apps, hosted on GitHub Pages at [selingerapps.com](
 
 ## Status
 
-**Live** — Deployed February 2026 with HTTPS enabled.
+**Live** — Deployed February 2026 with HTTPS enabled. EN + DE versions. Logo and favicon added March 2026.
 
 ## Structure
 
 ```
-├── index.html      # Main landing page
-├── privacy.html    # Privacy Policy
+├── index.html      # Main landing page (EN)
+├── de/
+│   └── index.html  # German version
+├── privacy.html    # Privacy Policy (EN)
 ├── impressum.html  # Legal Notice (German)
+├── logo.png        # Selinger Apps wordmark
+├── logo.svg        # Icon (used as favicon)
+├── favicon.png     # Favicon (PNG fallback)
+├── sitemap.xml     # XML sitemap
+├── robots.txt      # Crawl rules
 ├── CNAME           # Custom domain configuration
 └── README.md       # This file
 ```
